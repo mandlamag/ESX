@@ -8,6 +8,7 @@ import {
   TouchableHighlight,
 } from 'react-native';
 
+import { Container, Content, Form, Item, Input, Label } from 'native-base';
 import Auth0Lock from 'react-native-lock';
 
 var credentials = require('./auth0-credentials');
@@ -23,8 +24,8 @@ var WelcomeView = React.createClass({
             style={styles.badge}
             source={require('../img/badge.png')}
           />
-          <Text style={styles.title}>Auth0 Example</Text>
-          <Text style={styles.subtitle}>Identity made simple for Developers</Text>
+          <Text style={styles.title}>Enterprise Stock Exchange</Text>
+          <Text style={styles.subtitle}>Put your tokens where your talk is</Text>
         </View>
         <TouchableHighlight
           style={styles.signInButton}

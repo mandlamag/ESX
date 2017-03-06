@@ -3,6 +3,8 @@ target 'EXApp' do
   # use_frameworks!
 
   # Pods for tonypoc
+  pod 'RNMobileCenter', '~> 0.2.0'
+  pod 'MobileCenter', '~> 0.4.0'
 end
 
 # Auth0 Lock
