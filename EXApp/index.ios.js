@@ -59,7 +59,7 @@ var NavigationBarRouteMapper = {
   },
 
   Title(route, navigator, index, navState) {
-    return <Text style={ styles.title }>Auth0 Sample</Text>
+    return <Text style={ styles.title }>Enteprise Stock Exchange</Text>
   }
 };
 

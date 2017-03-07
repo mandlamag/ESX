@@ -25,7 +25,7 @@ var WelcomeView = React.createClass({
             source={require('../img/badge.png')}
           />
           <Text style={styles.title}>Enterprise Stock Exchange</Text>
-          <Text style={styles.subtitle}>Put your tokens where your talk is</Text>
+          <Text style={styles.subtitle}>Connect. Buy. Learn</Text>
         </View>
         <TouchableHighlight
           style={styles.signInButton}
