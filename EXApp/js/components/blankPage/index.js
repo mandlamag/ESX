@@ -2,10 +2,56 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { actions } from 'react-native-navigation-redux-helpers';
-import { Container, Header, Title, Content, Text, Button, Icon, Left, Right, Body } from 'native-base';
+import { Container, Header, Title, Content, Button, Icon, List, ListItem, Text, Thumbnail, Left, Right, Body } from 'native-base';
 
 import { openDrawer } from '../../actions/drawer';
 import styles from './styles';
+const pratik = require('../../../img/contacts/user1.jpeg');
+const sanket = require('../../../img/contacts/user2.jpg');
+const megha = require('../../../img/contacts/user3.jpeg');
+const atul = require('../../../img/contacts/user4.jpg');
+const saurabh = require('../../../img/contacts/user5.jpg');
+const varun = require('../../../img/contacts/user6.jpg');
+
+
+const data = [
+  {
+    img: pratik,
+    text: 'FBN',
+    note: 'Available: 20 units',
+    time: 'Price Per Unit: R 20',
+  },
+  {
+    img: sanket,
+    text: 'AMZN',
+    note: 'Available: 120 units',
+    time: 'Price Per Unit: R 20',
+  },
+  {
+    img: megha,
+    text: 'NSA',
+    note: 'Available: 20 units',
+    time: 'Price Per Unit: R 15',
+  },
+  {
+    img: atul,
+    text: 'NSA',
+    note: 'Available: 20 units',
+    time: 'Price Per Unit: R 15',
+  },
+  {
+    img: saurabh,
+    text: 'NSA',
+    note: 'Available: 20 units',
+    time: 'Price Per Unit: R 15',
+  },
+  {
+    img: varun,
+    text: 'NSA',
+    note: 'Available: 20 units',
+    time: 'Price Per Unit: R 15',
+  },
+];
 
 const {
   popRoute,
@@ -50,11 +96,23 @@ class BlankPage extends Component {
             </Button>
           </Right>
         </Header>
-
-        <Content padder>
-          <Text>
-            {(!isNaN(index)) ? list[index] : 'Create Something Awesome . . .'}
-          </Text>
+        <Content>
+          <List
+            dataArray={data} renderRow={item =>
+              <ListItem avatar>
+                <Left>
+                  <Thumbnail source={item.img} />
+                </Left>
+                <Body>
+                  <Text>{item.text}</Text>
+                  <Text numberOfLines={1} note>{item.note}</Text>
+                </Body>
+                <Right>
+                  <Text note>{item.time}</Text>
+                </Right>
+              </ListItem>
+        }
+          />
         </Content>
       </Container>
     );
