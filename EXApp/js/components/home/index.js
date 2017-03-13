@@ -1,14 +1,17 @@
 
 import React, { Component } from 'react';
-import { TouchableOpacity } from 'react-native';
+import { Image, Dimensions } from 'react-native';
 import { connect } from 'react-redux';
 import { actions } from 'react-native-navigation-redux-helpers';
-import { Container, Header, Title, Content, Text, Button, Icon, Left, Body, Right } from 'native-base';
+import { Container, Header, Title, Content, Button, Icon, Card, CardItem, Text, Thumbnail, Left, Right, Body, IconNB } from 'native-base';
 import { Grid, Row } from 'react-native-easy-grid';
 
 import { openDrawer } from '../../actions/drawer';
 import { setIndex } from '../../actions/list';
 import styles from './styles';
+const logo = require('../../../img/logo.png');
+const cardImage = require('../../../img/drawer-cover.png');
+const deviceWidth = Dimensions.get('window').width;
 
 const {
   reset,
@@ -54,20 +57,36 @@ class Home extends Component {
             </Button>
           </Right>
         </Header>
+        <Content padder>
+          <Card style={styles.mb}>
+            <CardItem bordered>
+              <Left>
+                <Thumbnail source={logo} />
+                <Body>
+                  <Text>Dashboard</Text>
+                  <Text note>April 15, 2016</Text>
+                </Body>
+              </Left>
+            </CardItem>
 
-        <Content>
-          <Grid style={styles.mt}>
-            {this.props.list.map((item, i) =>
-              <Row key={i}>
-                <TouchableOpacity
-                  style={styles.row}
-                  onPress={() => this.pushRoute('blankPage', i)}
-                >
-                  <Text style={styles.text}>{item}</Text>
-                </TouchableOpacity>
-              </Row>
-            )}
-          </Grid>
+            <CardItem>
+              <Body>
+                <Image style={{ alignSelf: 'center', height: 150, resizeMode: 'cover', width: deviceWidth / 1.18, marginVertical: 5 }} source={cardImage} />
+                <Text>
+										This is where quick stats are going to be.
+              </Text>
+
+              </Body>
+            </CardItem>
+            <CardItem style={{paddingVertical: 0}}>
+              <Left>
+                <Button transparent>
+                  <Icon name="logo-github" />
+                  <Text>1,926 stars</Text>
+                </Button>
+              </Left>
+            </CardItem>
+          </Card>
         </Content>
       </Container>
     );

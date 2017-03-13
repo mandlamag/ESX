@@ -12,7 +12,7 @@ const {
   replaceAt,
 } = actions;
 
-const background = require('../../../images/shadow.png');
+const background = require('../../../img/Default.png');
 
 class Login extends Component {
 
@@ -49,7 +49,7 @@ class Login extends Component {
               <View style={styles.bg}>
                 <Item style={styles.input}>
                   <Icon active name="person" />
-                  <Input placeholder="EMAIL" onChangeText={name => this.setState({ name })} />
+                  <Input placeholder="USERNAME" onChangeText={name => this.setState({ name })} />
                 </Item>
                 <Item style={styles.input}>
                   <Icon name="unlock" />

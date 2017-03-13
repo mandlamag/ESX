@@ -17,39 +17,39 @@ const varun = require('../../../img/contacts/user6.jpg');
 const data = [
   {
     img: pratik,
-    text: 'FBN',
+    text: 'FBN - M Zukerberg',
     note: 'Available: 20 units',
     time: 'Price Per Unit: R 20',
   },
   {
     img: sanket,
-    text: 'AMZN',
+    text: 'AMZN - Jeff Bezos',
     note: 'Available: 120 units',
     time: 'Price Per Unit: R 20',
   },
   {
     img: megha,
-    text: 'NSA',
+    text: 'NSA - Mae Jemison',
     note: 'Available: 20 units',
     time: 'Price Per Unit: R 15',
   },
   {
     img: atul,
-    text: 'NSA',
+    text: 'KBL -  M Johnson',
     note: 'Available: 20 units',
     time: 'Price Per Unit: R 15',
   },
   {
     img: saurabh,
-    text: 'NSA',
+    text: 'TSL - Elon Musk',
     note: 'Available: 20 units',
     time: 'Price Per Unit: R 15',
   },
   {
     img: varun,
-    text: 'NSA',
-    note: 'Available: 20 units',
-    time: 'Price Per Unit: R 15',
+    text: 'BLK - K Bryant',
+    note: 'Available: 3  units',
+    time: 'Price Per Unit: R 10'
   },
 ];
 
@@ -87,7 +87,7 @@ class BlankPage extends Component {
           </Left>
 
           <Body>
-            <Title>{(name) ? this.props.name : 'Blank Page'}</Title>
+            <Title>{(name) ? this.props.name : 'Stocks'}</Title>
           </Body>
 
           <Right>
