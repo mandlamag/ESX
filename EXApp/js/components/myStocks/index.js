@@ -18,38 +18,50 @@ const data = [
   {
     img: pratik,
     name: 'FBN - M Zukerberg',
-    note: 'Available: 20 units',
+    note: 'units: 10 ',
     price: 'Price: R 20',
+		delta: 'up',
+		percentage: '35%',
   },
   {
     img: sanket,
     name: 'AMZN - Jeff Bezos',
-    note: 'Available: 120 units',
+    note: 'units: 2 ',
     price: 'Price: R 20',
+		delta: 'down',
+		percentage: '15%'
   },
   {
     img: megha,
     name: 'NSA - Mae Jemison',
-    note: 'Available: 20 units',
+    note: 'units: 4',
     price: 'Price: R 15',
+		delta: 'down',
+		percentage: '35%'
   },
   {
     img: atul,
     name: 'KBL -  M Johnson',
-    note: 'Available: 20 units',
+    note: 'units: 3',
     price: 'Price: R 15',
+		delta: 'up',
+		percentage: '13%'
   },
   {
     img: saurabh,
     name: 'TSL - Elon Musk',
-    note: 'Delta: 20 units',
+    note: 'units: 3',
     price: 'Price: R 15',
+		delta: 'up',
+		percentage: '10%'
   },
   {
     img: varun,
     name: 'BLK - K Bryant',
-    note: 'Available: 3  units',
-    price: 'Price: R 10'
+    note: 'units: 3',
+    price: 'Price: R 10',
+		delta: 'down',
+		percentage: '55%'
   },
 ];
 
@@ -105,7 +117,8 @@ class MyStocks extends Component {
                 </Left>
                 <Body>
                   <Text>{item.name}</Text>
-                  <Text numberOfLines={1} note>{item.note}</Text>
+                  <Text numberOfLines={1} note>{item.note} | {item.delta}  {item.percentage}</Text>
+									
                 </Body>
                 <Right>
                   <Text note>{item.price}</Text>
