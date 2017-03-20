@@ -18,48 +18,48 @@ const data = [
   {
     img: pratik,
     name: 'FBN - M Zukerberg',
-    note: 'units: 10 ',
-    price: 'Price: R 20',
+    note: '10 shares ',
+    price: ' R 20',
 		delta: 'up',
 		percentage: '35%',
   },
   {
     img: sanket,
     name: 'AMZN - Jeff Bezos',
-    note: 'units: 2 ',
-    price: 'Price: R 20',
+    note: '10 shares',
+    price: ' R 20',
 		delta: 'down',
 		percentage: '15%'
   },
   {
     img: megha,
     name: 'NSA - Mae Jemison',
-    note: 'units: 4',
-    price: 'Price: R 15',
+    note: '13 shares',
+    price: ' R 15',
 		delta: 'down',
 		percentage: '35%'
   },
   {
     img: atul,
     name: 'KBL -  M Johnson',
-    note: 'units: 3',
-    price: 'Price: R 15',
+    note: '14 shares',
+    price: ' R 15',
 		delta: 'up',
 		percentage: '13%'
   },
   {
     img: saurabh,
     name: 'TSL - Elon Musk',
-    note: 'units: 3',
-    price: 'Price: R 15',
+    note: '20 shares',
+    price: ' R 15',
 		delta: 'up',
 		percentage: '10%'
   },
   {
     img: varun,
     name: 'BLK - K Bryant',
-    note: 'units: 3',
-    price: 'Price: R 10',
+    note: '12 shares',
+    price: ' R 10',
 		delta: 'down',
 		percentage: '55%'
   },
